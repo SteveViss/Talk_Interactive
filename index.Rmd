@@ -1,0 +1,239 @@
+---
+title       : New avenues on visualization with R
+subtitle    : R is more than statistics...
+author      : Steve Vissault
+job         : Research professional at UdS
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      #
+widgets     : [mathjax, quiz, bootstrap, interactive] # {mathjax, quiz, bootstrap}
+ext_widgets : {rCharts: [libraries/nvd3, libraries/leaflet, libraries/dygraphs]}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+biglogo     : qcbs.png
+assets      : {assets: ../../assets}
+
+---
+
+## R and the Web languages
+
+RMarkdown + knitr = HTML + CSS + Javascript
+
+- Created by Ramnath Vaidyanathan (McGill)
+[http://slidify.org/](http://slidify.org/)
+
+- Allows to generate slides in HTML/CSS/Javascript (Web lamguages)
+- The new avenue for dynamic and interactive visualization
+
+--- .segue bg:white
+
+## Interactivity
+
+---
+
+## Hans Rosling and R
+
+<div align="center">
+
+```{r, results = 'asis', echo=FALSE, warning=FALSE, message=FALSE, fig.align='center'}
+require(googleVis)
+M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
+plot(M1)
+```
+</div>
+
+--- .segue bg:white
+
+## HTML widgets
+
+---
+
+## HTML widget library
+
+HTML widgets are interactive graphics made for the web. These are the main libraries available:
+
+- [rCharts](http://rcharts.io/): interactive javascript visualizations from R
+- [leaflet](https://rstudio.github.io/leaflet/): interactive maps
+- [dygraphs](https://rstudio.github.io/dygraphs/): charting time series data
+- [metricsgraphics](http://www.htmlwidgets.org/showcase_metricsgraphics.html): scatterplots, linegraphs and histograms
+- [networkD3](http://christophergandrud.github.io/networkD3/): network graphs
+- [DT](https://rstudio.github.io/DT/): print dataframes as html
+- [threejs](http://www.htmlwidgets.org/showcase_threejs.html): 3d scatterplots and [globes](https://www.chromeexperiments.com/globe)
+- [DiagrammeR](http://rich-iannone.github.io/DiagrammeR/): pretty diagrams
+
+--- &radio2
+
+## Quizz
+
+Which of these two plots have a higher correlation?
+
+1. A
+2. B
+
+*** =image
+
+<img src=https://oli.cmu.edu/repository/webcontent/470835bf80020ca60018d5a6c359d34c/_u2_summarizing_data/_m2_examining_relationships/webcontent/linear1.gif>
+
+*** .explanation
+
+Both have the same correlation.
+
+---
+## rCharts
+
+```{r rchart1, results = 'asis', comment = NA, message = F, echo = F}
+library(rCharts)
+n1 <- nPlot(mpg ~ wt, data = mtcars, type = 'scatterChart')
+n1$show('inline')
+```
+
+Gallery: [http://rcharts.io/gallery/](http://rcharts.io/gallery/)
+
+---
+
+## leaflet
+
+```{r echo=FALSE, message=FALSE}
+library(knitr); library(htmlwidgets); library(dplyr)
+read_chunk('html_widgets.R')
+```
+
+```{r, 'leaflet1', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/leaflet1.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## dygraphs
+
+```{r, 'dygraphs1', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/dygraphs1.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## dygraphs (cont)
+
+```{r, 'dygraphs2', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/dygraphs2.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## dygraphs (cont)
+
+```{r, 'dygraphs3', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/dygraphs3.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## dygraphs (cont)
+
+```{r, 'dygraphs4', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/dygraphs4.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## metricsgraphics
+
+```{r, 'metricsgraphics1', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/metricsgraphics1.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## metricsgraphics (cont)
+
+```{r, 'metricsgraphics2', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/metricsgraphics2.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## metricsgraphics (cont)
+
+```{r, 'metricsgraphics3', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/metricsgraphics3.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## metricsgraphics (cont)
+
+```{r, 'metricsgraphics4', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/metricsgraphics4.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## metricsgraphics (cont)
+
+```{r, 'metricsgraphics5', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/metricsgraphics5.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## metricsgraphics (cont)
+
+```{r, 'metricsgraphics6', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/metricsgraphics6.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## networkD3
+
+```{r, 'networkD31', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/networkD31.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## networkD3 (cont)
+
+```{r, 'networkD32', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/networkD32.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## DT
+
+```{r, 'datatable1', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/dt1.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## threejs
+
+```{r, 'threejs1', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/threejs1.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## threejs (cont)
+
+```{r, 'threejs2', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/threejs2.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## DiagrammeR
+
+```{r, 'diagrammer1', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/diagrammer1.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```
+
+---
+
+## DiagrammeR (cont)
+
+```{r, 'diagrammer2', echo=FALSE, warning=FALSE,cache=FALSE,results='asis'}
+cat('<iframe src="./assets/widgets/diagrammer2.html" width=100% height=100% allowtransparency="true"> </iframe>')
+```

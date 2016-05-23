@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New avenues on visualization with R</title>
+  <meta charset="utf-8">
+  <meta name="description" content="New avenues on visualization with R">
+  <meta name="author" content="Steve Vissault">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/interactive/css/aceeditor.css"></link>
+<link rel=stylesheet href="libraries/widgets/nvd3/css/nv.d3.css"></link>
+<link rel=stylesheet href="libraries/widgets/nvd3/css/rNVD3.css"></link>
+<link rel=stylesheet href="libraries/widgets/leaflet/external/leaflet.css"></link>
+<link rel=stylesheet href="libraries/widgets/leaflet/external/leaflet-rCharts.css"></link>
+<link rel=stylesheet href="libraries/widgets/leaflet/external/legend.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/style.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  <script src="libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
+<script src="libraries/widgets/nvd3/js/d3.v3.min.js"></script>
+<script src="libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
+<script src="libraries/widgets/nvd3/js/fisheye.js"></script>
+<script src="libraries/widgets/leaflet/external/leaflet.js"></script>
+<script src="libraries/widgets/leaflet/external/leaflet-providers.js"></script>
+<script src="libraries/widgets/leaflet/external/Control.FullScreen.js"></script>
+
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='300px' src="assets/img/qcbs.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>New avenues on visualization with R</h1>
+    <h2>R is more than statistics...</h2>
+    <p>Steve Vissault<br/>Research professional at UdS</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>R and the Web languages</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>RMarkdown + knitr = HTML + CSS + Javascript</p>
+
+<p><a href="http://slidify.org/">http://slidify.org/</a></p>
+
+<p>Allow to generate slides in HTML/CSS/Javascript (Web lamguages)
+which is the new avenue for dynamic and interactive visualization</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-2" style="background:white;">
+  <hgroup>
+    <h2>Interactivity</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Hans Rosling and R</h2>
+  </hgroup>
+  <article data-timings="">
+    <div align="center">
+
+
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-4" style="background:white;">
+  <hgroup>
+    <h2>HTML widgets</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>HTML widget library</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>HTML widgets are interactive graphics made for the web. These are the main libraries available:</p>
+
+<ul>
+<li><a href="http://rcharts.io/">rCharts</a>: interactive javascript visualizations from R</li>
+<li><a href="https://rstudio.github.io/leaflet/">leaflet</a>: interactive maps</li>
+<li><a href="https://rstudio.github.io/dygraphs/">dygraphs</a>: charting time series data</li>
+<li><a href="http://www.htmlwidgets.org/showcase_metricsgraphics.html">metricsgraphics</a>: scatterplots, linegraphs and histograms</li>
+<li><a href="http://christophergandrud.github.io/networkD3/">networkD3</a>: network graphs</li>
+<li><a href="https://rstudio.github.io/DT/">DT</a>: print dataframes as html</li>
+<li><a href="http://www.htmlwidgets.org/showcase_threejs.html">threejs</a>: 3d scatterplots and <a href="https://www.chromeexperiments.com/globe">globes</a></li>
+<li><a href="http://rich-iannone.github.io/DiagrammeR/">DiagrammeR</a>: pretty diagrams</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Quizz</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class='row-fluid'>
+  <div class='span6'>
+    <p><img src=https://oli.cmu.edu/repository/webcontent/470835bf80020ca60018d5a6c359d34c/_u2_summarizing_data/_m2_examining_relationships/webcontent/linear1.gif></p>
+
+  </div>
+  <div class='span6'>
+    <div class="quiz quiz-single well new">
+      <p>Which of these two plots have a higher correlation?</p>
+
+<ol>
+<li>A</li>
+<li>B</li>
+</ol>
+
+      <button class="quiz-submit btn btn-primary">Submit</button>
+      <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+      <button class="quiz-show-answer btn btn-success">Show Answer</button>
+      <button class="quiz-clear btn btn-danger">Clear</button>
+      
+      <div class="quiz-explanation">
+  <p>Both have the same correlation.</p>
+
+</div>
+    </div>
+  </div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>rCharts</h2>
+  </hgroup>
+  <article data-timings="">
+    <div id = 'chart61022929650d' class = 'rChart nvd3'></div>
+
+<script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart61022929650d()
+    });
+    function drawchart61022929650d(){  
+      var opts = {
+ "dom": "chart61022929650d",
+"width":    800,
+"height":    400,
+"x": "wt",
+"y": "mpg",
+"type": "scatterChart",
+"id": "chart61022929650d" 
+},
+        data = [
+ {
+ "mpg":             21,
+"cyl":              6,
+"disp":            160,
+"hp":            110,
+"drat":            3.9,
+"wt":           2.62,
+"qsec":          16.46,
+"vs":              0,
+"am":              1,
+"gear":              4,
+"carb":              4 
+},
+{
+ "mpg":             21,
+"cyl":              6,
+"disp":            160,
+"hp":            110,
+"drat":            3.9,
+"wt":          2.875,
+"qsec":          17.02,
+"vs":              0,
+"am":              1,
+"gear":              4,
+"carb":              4 
+},
+{
+ "mpg":           22.8,
+"cyl":              4,
+"disp":            108,
+"hp":             93,
+"drat":           3.85,
+"wt":           2.32,
+"qsec":          18.61,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              1 
+},
+{
+ "mpg":           21.4,
+"cyl":              6,
+"disp":            258,
+"hp":            110,
+"drat":           3.08,
+"wt":          3.215,
+"qsec":          19.44,
+"vs":              1,
+"am":              0,
+"gear":              3,
+"carb":              1 
+},
+{
+ "mpg":           18.7,
+"cyl":              8,
+"disp":            360,
+"hp":            175,
+"drat":           3.15,
+"wt":           3.44,
+"qsec":          17.02,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2 
+},
+{
+ "mpg":           18.1,
+"cyl":              6,
+"disp":            225,
+"hp":            105,
+"drat":           2.76,
+"wt":           3.46,
+"qsec":          20.22,
+"vs":              1,
+"am":              0,
+"gear":              3,
+"carb":              1 
+},
+{
+ "mpg":           14.3,
+"cyl":              8,
+"disp":            360,
+"hp":            245,
+"drat":           3.21,
+"wt":           3.57,
+"qsec":          15.84,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4 
+},
+{
+ "mpg":           24.4,
+"cyl":              4,
+"disp":          146.7,
+"hp":             62,
+"drat":           3.69,
+"wt":           3.19,
+"qsec":             20,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              2 
+},
+{
+ "mpg":           22.8,
+"cyl":              4,
+"disp":          140.8,
+"hp":             95,
+"drat":           3.92,
+"wt":           3.15,
+"qsec":           22.9,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              2 
+},
+{
+ "mpg":           19.2,
+"cyl":              6,
+"disp":          167.6,
+"hp":            123,
+"drat":           3.92,
+"wt":           3.44,
+"qsec":           18.3,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              4 
+},
+{
+ "mpg":           17.8,
+"cyl":              6,
+"disp":          167.6,
+"hp":            123,
+"drat":           3.92,
+"wt":           3.44,
+"qsec":           18.9,
+"vs":              1,
+"am":              0,
+"gear":              4,
+"carb":              4 
+},
+{
+ "mpg":           16.4,
+"cyl":              8,
+"disp":          275.8,
+"hp":            180,
+"drat":           3.07,
+"wt":           4.07,
+"qsec":           17.4,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              3 
+},
+{
+ "mpg":           17.3,
+"cyl":              8,
+"disp":          275.8,
+"hp":            180,
+"drat":           3.07,
+"wt":           3.73,
+"qsec":           17.6,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              3 
+},
+{
+ "mpg":           15.2,
+"cyl":              8,
+"disp":          275.8,
+"hp":            180,
+"drat":           3.07,
+"wt":           3.78,
+"qsec":             18,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              3 
+},
+{
+ "mpg":           10.4,
+"cyl":              8,
+"disp":            472,
+"hp":            205,
+"drat":           2.93,
+"wt":           5.25,
+"qsec":          17.98,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4 
+},
+{
+ "mpg":           10.4,
+"cyl":              8,
+"disp":            460,
+"hp":            215,
+"drat":              3,
+"wt":          5.424,
+"qsec":          17.82,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4 
+},
+{
+ "mpg":           14.7,
+"cyl":              8,
+"disp":            440,
+"hp":            230,
+"drat":           3.23,
+"wt":          5.345,
+"qsec":          17.42,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4 
+},
+{
+ "mpg":           32.4,
+"cyl":              4,
+"disp":           78.7,
+"hp":             66,
+"drat":           4.08,
+"wt":            2.2,
+"qsec":          19.47,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              1 
+},
+{
+ "mpg":           30.4,
+"cyl":              4,
+"disp":           75.7,
+"hp":             52,
+"drat":           4.93,
+"wt":          1.615,
+"qsec":          18.52,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              2 
+},
+{
+ "mpg":           33.9,
+"cyl":              4,
+"disp":           71.1,
+"hp":             65,
+"drat":           4.22,
+"wt":          1.835,
+"qsec":           19.9,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              1 
+},
+{
+ "mpg":           21.5,
+"cyl":              4,
+"disp":          120.1,
+"hp":             97,
+"drat":            3.7,
+"wt":          2.465,
+"qsec":          20.01,
+"vs":              1,
+"am":              0,
+"gear":              3,
+"carb":              1 
+},
+{
+ "mpg":           15.5,
+"cyl":              8,
+"disp":            318,
+"hp":            150,
+"drat":           2.76,
+"wt":           3.52,
+"qsec":          16.87,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2 
+},
+{
+ "mpg":           15.2,
+"cyl":              8,
+"disp":            304,
+"hp":            150,
+"drat":           3.15,
+"wt":          3.435,
+"qsec":           17.3,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2 
+},
+{
+ "mpg":           13.3,
+"cyl":              8,
+"disp":            350,
+"hp":            245,
+"drat":           3.73,
+"wt":           3.84,
+"qsec":          15.41,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              4 
+},
+{
+ "mpg":           19.2,
+"cyl":              8,
+"disp":            400,
+"hp":            175,
+"drat":           3.08,
+"wt":          3.845,
+"qsec":          17.05,
+"vs":              0,
+"am":              0,
+"gear":              3,
+"carb":              2 
+},
+{
+ "mpg":           27.3,
+"cyl":              4,
+"disp":             79,
+"hp":             66,
+"drat":           4.08,
+"wt":          1.935,
+"qsec":           18.9,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              1 
+},
+{
+ "mpg":             26,
+"cyl":              4,
+"disp":          120.3,
+"hp":             91,
+"drat":           4.43,
+"wt":           2.14,
+"qsec":           16.7,
+"vs":              0,
+"am":              1,
+"gear":              5,
+"carb":              2 
+},
+{
+ "mpg":           30.4,
+"cyl":              4,
+"disp":           95.1,
+"hp":            113,
+"drat":           3.77,
+"wt":          1.513,
+"qsec":           16.9,
+"vs":              1,
+"am":              1,
+"gear":              5,
+"carb":              2 
+},
+{
+ "mpg":           15.8,
+"cyl":              8,
+"disp":            351,
+"hp":            264,
+"drat":           4.22,
+"wt":           3.17,
+"qsec":           14.5,
+"vs":              0,
+"am":              1,
+"gear":              5,
+"carb":              4 
+},
+{
+ "mpg":           19.7,
+"cyl":              6,
+"disp":            145,
+"hp":            175,
+"drat":           3.62,
+"wt":           2.77,
+"qsec":           15.5,
+"vs":              0,
+"am":              1,
+"gear":              5,
+"carb":              6 
+},
+{
+ "mpg":             15,
+"cyl":              8,
+"disp":            301,
+"hp":            335,
+"drat":           3.54,
+"wt":           3.57,
+"qsec":           14.6,
+"vs":              0,
+"am":              1,
+"gear":              5,
+"carb":              8 
+},
+{
+ "mpg":           21.4,
+"cyl":              4,
+"disp":            121,
+"hp":            109,
+"drat":           4.11,
+"wt":           2.78,
+"qsec":           18.6,
+"vs":              1,
+"am":              1,
+"gear":              4,
+"carb":              2 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+
+<p>Gallery: <a href="http://rcharts.io/gallery/">http://rcharts.io/gallery/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>leaflet</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/leaflet1.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>dygraphs</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/dygraphs1.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>dygraphs (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/dygraphs2.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>dygraphs (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/dygraphs3.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>dygraphs (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/dygraphs4.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>metricsgraphics</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/metricsgraphics1.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>metricsgraphics (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/metricsgraphics2.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>metricsgraphics (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/metricsgraphics3.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>metricsgraphics (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/metricsgraphics4.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>metricsgraphics (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/metricsgraphics5.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>metricsgraphics (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/metricsgraphics6.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>networkD3</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/networkD31.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>networkD3 (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/networkD32.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>DT</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/dt1.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>threejs</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/threejs1.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>threejs (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/threejs2.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>DiagrammeR</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/diagrammer1.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>DiagrammeR (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="./assets/widgets/diagrammer2.html" width=100% height=100% allowtransparency="true"> </iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='R and the Web languages'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Interactivity'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Hans Rosling and R'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='HTML widgets'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='HTML widget library'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Quizz'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='rCharts'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='leaflet'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='dygraphs'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='dygraphs (cont)'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='dygraphs (cont)'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='dygraphs (cont)'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='metricsgraphics'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='metricsgraphics (cont)'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='metricsgraphics (cont)'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='metricsgraphics (cont)'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='metricsgraphics (cont)'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='metricsgraphics (cont)'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='networkD3'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='networkD3 (cont)'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='DT'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='threejs'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='threejs (cont)'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='DiagrammeR'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='DiagrammeR (cont)'>
+         25
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="libraries/widgets/interactive/js/opencpu-0.5.js"></script>
+<script src="libraries/widgets/interactive/js/interactive.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
